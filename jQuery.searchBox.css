@@ -1,0 +1,197 @@
+/* --  Default search styling -- */
+
+.search {
+	padding: 2px;
+	border: 1px solid #c0c0c0;
+	float: left;
+	width: 310px;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    height: 22px;
+	}
+	.search input.search-input {
+		color: #c0c0c0;
+		float: left;
+		width: 220px;
+        height: 16px;
+		border: 0;
+		padding: 3px;
+        outline: none;
+		}
+		.active input.search-input {
+			color: #000;
+			}
+	.search input.search-reset {
+		display: none;
+		float: left;
+        height: 22px;
+		width: 20px;
+		border: 0;
+		padding: 3px;
+		}
+	.search input.search-submit {
+		float: right;
+        height: 22px;
+		width: 60px;
+		border: 0;
+		padding: 3px;
+		}
+	.infocus {
+        border: 1px solid #0f4eba;
+        }
+
+/* --  search OS styling -- */
+
+#os-bar {
+    height: 30px;
+    padding: 10px;
+    background: #b2b2b2;
+    background-image: -moz-linear-gradient(100% 100% 90deg, #969696, #c5c5c5);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#c5c5c5), to(#969696));
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #404040;
+    -moz-box-shadow: 0 -1px 0 #b9b9b9;
+    -webkit-box-shadow: 0 -1px 0 #b9b9b9;
+    box-shadow: 0 -1px 0 #b9b9b9;
+    }
+    .search-os {
+        background: #fff;
+        padding: 2px;
+        border-top: 1px solid #646464;
+        border-right: 1px solid #646464;
+        border-bottom: 1px solid #737373;
+        border-left: 1px solid #646464;
+        float: right;
+        width: 310px;
+        height: 25px;
+        -moz-border-radius: 14px;
+        -webkit-border-radius: 14px;
+        border-radius: 14px;
+        -moz-box-shadow: inset 2px 2px 3px #cacaca, 0 1px 0 #dbdbdb;
+        -webkit-box-shadow: 0 1px 0 #dbdbdb;
+        box-shadow: inset 2px 2px 3px #cacaca, 0 1px 0 #dbdbdb;
+        }
+        .search-os input.search-input {
+            color: #5b5b5b;
+            float: left;
+            width: 255px;
+            border: 0;
+            padding: 5px 8px 4px 0;
+            background: transparent;
+            outline: none;
+            }
+            .active-os input.search-input {
+                color: #000;
+                }
+        .search-os input.search-reset {
+            display: none;
+            float: left;
+            width: 14px;
+            height: 14px;
+            background: url("demo-images/icons-os.png") -14px -14px;
+            border: 0;
+            margin: 6px 0 5px 0;
+            padding: 0;
+            cursor: pointer;
+            }
+            .search-os input.search-reset:hover {
+                background-position: -14px 0;
+                }
+        .search-os input.search-submit {
+            float: left;
+            width: 14px;
+            height: 14px;
+            background: url("demo-images/icons-os.png") 0 -14px;
+            border: 0;
+            padding: 0;
+            margin: 6px 4px 5px 8px;
+            }
+            .active-os input.search-submit {
+                cursor: pointer;
+                }
+                .active-os input.search-submit:hover {
+                    background-position: 0 0;
+                    }
+        .infocus-os {
+            -moz-box-shadow: inset 2px 2px 3px #cacaca, 0 1px 0 #bdd7ee, 0 0 2px 1px #2b7cff; 
+            }
+            
+/* --  search Google styling -- */
+
+.search-goog {
+    background: #fff;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+    width: 640px;
+    height: 30px;
+    -moz-box-shadow: 1px 1px 0 #e7e7e7;
+    -webkit-box-shadow: 1px 1px 0 #e7e7e7;
+    box-shadow: 1px 1px 0 #e7e7e7;
+    }
+    .search-goog input {
+        font-size: 1em;
+        }
+    .search-goog input.search-input {
+        color: #5b5b5b;
+        float: left;
+        width: 530px;
+        border: 0;
+        padding: 4px 8px;
+        background: transparent;
+        outline: none;
+        }
+        .active-goog input.search-input {
+            color: #000;
+            }
+    .search-goog input.search-reset {
+        display: none;
+        float: left;
+        width: 13px;
+        height: 12px;
+        background: url("demo-images/icons-goog.png") no-repeat #fff;
+        margin: 9px 0;
+        border: 0;
+        cursor: pointer;
+        }
+        .search-goog input.search-reset:hover {
+            background-position: 0 -12px;
+            }
+    .search-goog input.search-submit {
+        float: right;
+        border: 0;
+        margin: 0;
+        height: 30px;
+        padding-left: 7px;
+        border-left: 1px solid #ccc;
+        background: #dfdfdf;
+        background-image: -moz-linear-gradient(100% 100% 90deg, #dfdfdf, #f1f1f1);
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f1f1f1), to(#dfdfdf));
+        -moz-box-shadow: inset 0 1px 0 #fff, inset 0 -1px 0 #d7d7d7;
+        -webkit-box-shadow: inset 0 1px 0 #fff, inset 0 -1px 0 #d7d7d7;
+        box-shadow: inset 0 1px 0 #fff, inset 0 -1px 0 #d7d7d7;
+        }
+        .active-goog input.search-submit {
+            cursor: pointer;
+            }
+    .infocus-goog {
+        -moz-box-shadow: 0 0 2px 1px #2b7cff; 
+        }
+
+/* -- Styles for demo page (below this point not required for searchBox plugin) -- */
+
+body {
+    background: #fff;
+    font-family: arial, sans-serif;
+    }
+h3 {
+    margin: 0 0 15px 0;    
+    }
+hr {
+    color: #c0c0c0;
+    background-color: #c0c0c0;
+    height: 1px;
+    border: 0;
+    }

@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <style type="text/css">
+            body {
+                font-family: arial, sans-serif;
+                line-height: 1.5;
+                font-size: .9em
+                }
+                
+            table {
+                border-collapse: collapse;
+                border: 1px solid #ccc;
+                }
+                
+            pre {
+                display: block;
+                background: #000;
+                color: #fff;
+                padding: 5px;
+                width: 500px;
+                }
+        </style>
+        <title>jQuery searchBox docs</title>
+    </head>
+<body>
+    <h2>Overview:</h2>
+    <p>jQuery searchBox is a simple OS inspired search input, with standardized behaviour across all browsers.</p>
+    <h2>Configuration and Options:</h2>
+    <table width="800" border="1" cellpadding="3">
+        <tr>
+            <td>&nbsp;</td>
+            <td><strong>Description</strong></td>
+            <td><strong>Default</strong></td>
+            <td><strong>Options</strong></td>
+        </tr>
+        <tr>
+            <td><strong>activeClass:</strong></td>
+            <td>Search box active class</td>
+            <td> 'active'           </td>
+            <td>Any valied css class</td>
+        </tr>
+        <tr>
+            <td><strong>inFocusClass:</strong></td>
+            <td>Search box in focus class</td>
+            <td>'infocus' </td>
+            <td>Any valied css class</td>
+        </tr>
+        <tr>
+            <td><strong>disabledButtonClass:</strong></td>
+            <td>Disabled button class</td>
+            <td>'disabled' </td>
+            <td>Any valied css class</td>
+        </tr>
+        <tr>
+            <td><strong>explicitDefaultValue:</strong></td>
+            <td>Only value to treat as default</td>
+            <td>'Search...' </td>
+            <td>string eg; 'Search...' | false</td>
+        </tr>
+            <td><strong>disableBlankSearch: </strong></td>
+            <td>Disable blank searches</td>
+            <td> true               </td>
+            <td>true | false</td>
+        </tr>
+        <tr>
+            <td><strong>searchInputSelector: </strong></td>
+            <td>Override search input selector</td>
+            <td>false </td>
+            <td> Any jQuery selector eg; '#foobar' | false</td>
+        </tr>
+        <tr>
+            <td><strong>searchResetSelector:</strong></td>
+            <td>Override search reset selector</td>
+            <td>false </td>
+            <td> Any jQuery selector | false</td>
+        </tr>
+        <tr>
+            <td><strong>searchSubmitSelector:</strong></td>
+            <td>Override search submit selector</td>
+            <td>false </td>
+            <td> Any jQuery selector | false</td>
+        </tr>
+    </table>
+    
+<h2>Demo page:</h2>
+<p><a href="demos.html">Demo page</a></p>
+<h2>Examples &amp; Usage:</h2>
+<h3>Basic usage:</h3>
+<strong>Markup:</strong>
+<pre>
+&lt;form id=&quot;foo&quot; class=&quot;search&quot; action=&quot;&quot;&gt;
+    &lt;input type=&quot;text&quot; value=&quot;Search...&quot; /&gt;
+    &lt;input type=&quot;reset&quot; value=&quot;x&quot; /&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Search&quot; /&gt;
+&lt;/form&gt;</pre>
+<strong>Javascript:</strong>
+<pre>
+$('#foo').searchBox();</pre>
+<h3>Setting an explicit default value:</h3>
+<p>Often a search box will be returned pre-populated with user input data.<br />
+In these cases we want the searchBox to recognise that it is already in an active state.<br />
+We can do this by setting an explicit default value - searchBox will then only be considered to<br />
+be in an active state if this value is <strong>not</strong> matched.<br />
+If set to false the searchBox will consider whatever value it is loaded with to be its<br />
+default value.</p>
+<pre>$('#foo').searchBox({
+    explicitDefaultValue: 'Search articles'
+});</pre>
+<h3>Unbinding searchBox:</h3>
+<p>To unbind searchBox from any element simply call it while passing the argument 'die'.<br />
+All bindings will be removed and the elements returned to their original states.</p>
+<pre>$('#foo').searchBox('die');</pre>
+<h2>Customizing searchBox:</h2>
+<p>Searchbox by default uses very simple markup and all visual customization is done via CSS.<br />
+If you wish to use a different markup structure to accommodate your needs you may need to<br />
+specify custom selectors for the relevent elements, as by default it uses very broad selectors;</p>
+<pre>$('#foo').searchBox({
+    searchInputSelector: '#search-input-foo'
+});</pre>
+<p>If you need to set any custom classes you can do so via;</p>
+<pre>$('#foo').searchBox({
+    disabledButtonClass: 'disabled-foo'
+});</pre>
+<h2>Supported on:</h2>
+<p>Chrome, Firefox 3+, Opera 9+, Safari 5+, IE6+ (excluding advanced css styling)</p>
+<h2>Dependencies</h2>
+<p><a href="http://www.jquery.com/">jQuery</a> (1.4.2+)</p>
+<h2>Download:</h2>
+<p><a href="https://github.com/Souliss/jQuery-searchBox/archives/master">Download example package</a> (v1.0)<br />
+<a href="https://github.com/Souliss/jQuery-searchBox/jQuery.searchBox.js">Download development javascript only</a> 7.3kb uncompressed (v1.0)<br />
+<a href="https://github.com/Souliss/jQuery-searchBox/jQuery.searchBox.min.js">Download production javascript only</a> 1.0kb minified and gzipped (v1.0)<br />
+<a href="https://github.com/Souliss/jQuery-searchBox">Edge source avaliable on github</a></p>
+<pre>git clone git://github.com/Souliss/jQuery-searchBox.git</pre>
+<h2>License:</h2>
+<p>jQuery searchBox is released under the <a href="http://creativecommons.org/licenses/MIT/">MIT license</a>.<br/>
+Please leave copyright notices intact.</p>
+</body>
+</html>

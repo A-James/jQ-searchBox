@@ -1,0 +1,115 @@
+<!doctype html>
+<head>
+	
+    <title>jQuery searchBox</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="jQuery.searchBox.css" />
+
+</head>
+<body>
+
+	<h3>Default setup</h3>
+	<form id="search" class="search" action="">
+		<input class="search-input" type="text" tabindex=1 value="Search..." />
+		<input class="search-reset" type="reset" tabindex=2 value="x" />
+		<input class="search-submit" type="submit" tabindex=3 value="search" />
+	</form>
+	
+	<br/><br/><hr/><br/>
+	
+	<h3>Custom settings</h3>
+	<form id="search-2" class="search" action="">
+		<input class="search-input" type="text" value="Search..." />
+		<input class="search-reset" type="reset" value="x" />
+		<input class="search-submit" type="submit" value="search" />
+	</form>
+	
+	<br/><br/><hr/><br/>
+	
+	<h3>OS styling (modern browsers only)</h3>
+	<div id="os-bar">
+		<form id="search-3" class="search-os" action="">
+			<input class="search-submit" type="submit" value="" />
+			<input class="search-input" type="text" value="Search..." />
+			<input class="search-reset" type="reset" value="" />
+		</form>
+	</div>
+	
+	<br/><br/><hr/><br/>
+	
+	<h3>Google styling (modern browsers only)</h3>
+	<form id="search-4" class="search-goog" action="">
+		<input class="search-input" type="text" value="Search..." />
+		<input class="search-reset" type="reset" value="" />
+		<input class="search-submit" type="submit" value="Search" />
+	</form>
+	
+	<br/><br/><hr/><br/>
+	
+	<h3>Binding to new instance</h3>
+	<div id="livearea"></div>
+	<a href="#" id="addlive">Inject new searchBox</a>
+	
+	<br/><br/><hr/><br/>
+	
+	<h3>Teardown</h3>
+	<a href="#" id="destroy">Teardown #1 (Default setup)</a>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.js"></script>
+	<script src="jQuery.searchBox.js"></script>
+	<script>
+	
+		//Default Setup
+		$('#search').searchBox();
+	
+		//Blank Search Allowed
+		$('#search-2').searchBox({
+			disableBlankSearch: false
+		});
+		
+		//OS styling (setting custom classes)
+		$('#search-3').searchBox({
+			activeClass: 'active-os',
+			inFocusClass: 'infocus-os',
+			disabledButtonClass: 'disabled-os'
+		});
+		
+		//Google styling (setting custom classes)
+		$('#search-4').searchBox({
+			activeClass: 'active-goog',
+			inFocusClass: 'infocus-goog',
+			disabledButtonClass: 'disabled-goog'
+		});
+		
+		//Live Bindings
+		$('#search-5').searchBox({
+			liveBindings: true,
+			searchInputSelector: '#search-input-5',
+			searchResetSelector: '#search-reset-5',
+			searchSubmitSelector: '#search-submit-5'	
+		});
+		
+		//Destroy searchBox
+		$('#destroy').click( function(e){
+			$('#search').searchBox('die');
+			e.preventDefault();
+		});
+		
+		//Inject new searchBox (for live demo purposes)
+		$('#addlive').click( function(e){
+			$('#livearea').append(
+				'<form id="search-5" class="search" action="">'
+				+	'<input class="search-input" id="search-input-5" type="text" value="Search..." />'
+				+	'<input class="search-reset" id="search-reset-5" type="reset" value="x" />'
+				+	'<input class="search-submit" id="search-submit-5" type="submit" value="search" />'
+				+'</form>');
+			$(this).remove();
+			$('#search-5').searchBox();
+			e.preventDefault();
+		});
+
+		
+	</script>
+
+</body>
+</html>
